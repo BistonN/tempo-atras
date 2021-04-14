@@ -1,6 +1,6 @@
 {
   "name": "tempo-atras-pt-br",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Pacote para obter o tempo escrito entre duas datas",
   "main": "index.js",
   "scripts": {
