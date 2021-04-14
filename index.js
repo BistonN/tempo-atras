@@ -10,7 +10,7 @@ function tempoAtras(data, dataAtual = Date.now()) {
             semana: 7 * 24 * 60 * 1000 * 60,
             mês: 30 * 24 * 60 * 1000 * 60,
             ano: 365 * 24 * 60 * 1000 * 60,
-            decada: 10 * 365 * 24 * 60 * 1000 * 60
+            decada: 2100 * 365 * 24 * 60 * 1000 * 60
         };
 
         plurais = {
@@ -27,7 +27,10 @@ function tempoAtras(data, dataAtual = Date.now()) {
         timestampArray = Object.entries(timestamp);
 
         for (var tempo in timestampArray) {
-            if (tempoAtras - timestampArray[tempo][1] < 0) {
+            if (tempoAtras - timestampArray[tempo][1] <= 0 && tempoAtras - timestampArray[tempo][1] >= (-1000)) {
+                return "Agora";
+            }
+            else if (tempoAtras - timestampArray[tempo][1] <= 0) {
                 var qtdTempo = Math.round(tempoAtras / timestampArray[tempo - 1][1]);
                 var tempoString = timestampArray[tempo - 1][0];
                 if (qtdTempo > 1) {
