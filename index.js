@@ -41,8 +41,6 @@ function tempoAtras(data, dataAtual = Date.now()) {
     }
 }
 
-tempoAtras(new Date(2020,3,1));
-
 module.exports = {
     tempoAtras
 }
