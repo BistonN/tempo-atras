@@ -9,7 +9,8 @@ function tempoAtras(data, dataAtual = Date.now()) {
             dia: 24 * 60 * 1000 * 60,
             semana: 7 * 24 * 60 * 1000 * 60,
             mês: 30 * 24 * 60 * 1000 * 60,
-            ano: 365 * 24 * 60 * 1000 * 60
+            ano: 365 * 24 * 60 * 1000 * 60,
+            decada: 10 * 365 * 24 * 60 * 1000 * 60
         };
 
         plurais = {
@@ -19,7 +20,8 @@ function tempoAtras(data, dataAtual = Date.now()) {
             dia: "dias",
             semana: "semanas",
             mês: "meses",
-            ano: "anos"
+            ano: "anos",
+            decada: "decadas"
         };
 
         timestampArray = Object.entries(timestamp);
@@ -38,6 +40,8 @@ function tempoAtras(data, dataAtual = Date.now()) {
         return 'Data Inválida';
     }
 }
+
+tempoAtras(new Date(2020,3,1));
 
 module.exports = {
     tempoAtras
