@@ -24,7 +24,7 @@ function tempoAtras(data, dataAtual = Date.now()) {
             decada: "decadas"
         };
 
-        timestampArray = Object.entries(timestamp);
+        const timestampArray = Object.entries(timestamp);
 
         for (var tempo in timestampArray) {
             if (tempoAtras - timestampArray[tempo][1] <= 0 && tempoAtras - timestampArray[tempo][1] >= (-1000)) {
