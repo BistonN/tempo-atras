@@ -13,7 +13,7 @@ function tempoAtras(data, dataAtual = Date.now()) {
             decada: 2100 * 365 * 24 * 60 * 1000 * 60
         };
 
-        plurais = {
+        var plurais = {
             segundo: "segundos",
             minuto: "minutos",
             hora: "horas",
